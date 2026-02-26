@@ -525,6 +525,56 @@ html {
   background: var(--color-purple);
 }
 
+/* --- SLIDER ALTI MENÜ BUTONU --- */
+.slider-bottom-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem; /* Slider ile buton arasına nefes alacak boşluk */
+  padding: 0 1rem;
+}
+
+.btn-view-menu {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-white);
+  text-decoration: none;
+  border: 2px solid var(--color-green);
+  border-radius: 99px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Ok ikonuna özel geçiş efekti */
+.btn-view-menu svg {
+  transition: transform 0.3s ease;
+}
+
+/* Hover (Üzerine gelme) Durumu */
+.btn-view-menu:hover {
+  background-color: var(--color-green);
+  color: #000; /* Zemin yeşil olunca yazı siyah olsun ki okunsun */
+  box-shadow: 0 0 20px rgba(204, 255, 0, 0.4);
+}
+
+.btn-view-menu:hover svg {
+  transform: translateX(6px); /* Oku sağa doğru iterek tıklamaya teşvik et */
+}
+
+/* Mobilde biraz daha kibar dursun */
+@media (max-width: 768px) {
+  .btn-view-menu {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
 /*    =============================
       Modal Styles
     ============================= */
@@ -585,10 +635,6 @@ html {
 }
 
 /* Swiper Özel Ayarları */
-.swiper {
-  padding-left: 1.5rem !important;
-  padding-bottom: 2.5rem !important;
-}
 
 @media (min-width: 768px) {
   .swiper {
